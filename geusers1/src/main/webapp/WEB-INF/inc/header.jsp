@@ -1,0 +1,201 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Application</title>
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+<style>
+	
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+	background-color : black;
+	padding : 2px;
+}
+
+nav {
+	display : flex;
+	margin : auto;
+	width : 10%;
+	align-items : center;
+	justify-content : center;
+	font-weight : semi-bold;
+	
+	
+}
+
+nav > a {
+	margin : auto;
+	color : white;
+	text-decoration : none;
+	padding : 5px;
+	
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+.container, .form-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Formulaires */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #000;
+    outline: none;
+}
+
+/* Boutons */
+button, .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #333;
+}
+
+button[type="button"] {
+    background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+
+.message, .error {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error, .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #000;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+
+.actions a.delete {
+    color: #dc3545;
+}
+
+.actions a.delete:hover {
+    background-color: #dc3545;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #ddd;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
+	
+</style>
+<body>
+<header>
+    <nav>
+        <a href="${pageContext.request.contextPath}/list" >Liste</a>
+        <a href="${pageContext.request.contextPath}/addUser">Ajouter</a>
+    </nav>
+</header>
